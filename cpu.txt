@@ -1,0 +1,42 @@
+cisco_ios or cisco_asr
+------------------------
+show clock
+show process cpu | i utilization
+
+cisco_asa
+----------------------
+show clock
+show process cpu | i utilization
+
+cisco_nxos
+----------
+show clock
+show processes cpu | i util
+
+juniper
+----------
+ show system uptime | grep Current
+show chassis routing-engine | grep Idle
+show chassis routing-engine | no-more 
+
+f5_ltm or f5
+--------------
+show sys clock
+show sys cpu | grep Utilization
+tmsh
+
+brocade_nos or brocade
+----------------------
+show clock
+show version | include System
+show cpu-utilization | include idle
+show cpu-utilization | include 300
+
+vyatta
+--------
+show date - success 
+show system processes extensive | grep cpu - need admin priviliage to run grep command 
+
+nerscaler
+----------
+stat cpu
